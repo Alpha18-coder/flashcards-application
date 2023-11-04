@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flashcards Application</title>
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="AsherCode">
+    <meta name="description" content="Aplicación de Flashcards 
+    para Estudiantes">
+
+    <link rel="stylesheet" href="./css/style.css?v=1.0">
+    <link rel="stylesheet" href="./css/flashcards.css?v=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <section class="layer">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </section>
+    <header class="glass-container">
+        <nav>
+            <h1><a href="/">Flashcards App</a></h1>
+            <ul class="navlinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/database.html">Base de Datos</a></li>
+                <li><a href="/tutorial.html">Tutorial</a></li>
+            </ul>
+
+            <div class="options">
+                <button>
+                    <a class="add icon" href="/flashcards.html">+</a>
+                </button>
+                <button class="icon glass">
+                    <i class="material-symbols-rounded">
+                    notifications
+                    </i>
+                </button>
+                <div class="profile glass">
+                    <div class="profile-pic">A</div>
+                    <p>AsherCode</p>
+                    <i class="material-symbols-rounded">
+                    arrow_drop_down
+                    </i>
+                </div>
+            </div>
+
+            <button class="hamburger">
+                <i class="hamburger material-symbols-rounded">
+                menu
+                </i>
+            </button>
+            
+            <div class="mobile-menu">
+                <ul class="navlinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/database.html">Base de Datos</a></li>
+                    <li><a href="/tutorial.html">Tutorial</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="deck-stack glass">
+            <header class="deck-stack__header">
+                <h2>Tus Mazos</h2>
+                <button class="icon glass">
+                    <i class="material-symbols-rounded">
+                    search
+                    </i>
+                </button>
+            </header>
+            <section class="deck-stack__content">
+                <article class="deck">
+                    <header class="deck__header">
+                        <h5>Computer Science</h5>
+                        <button class="icon">
+                            <i class="material-symbols-rounded">
+                            more_vert
+                            </i>
+                        </button>
+                    </header>
+                    <div class="deck__props">
+                        <i class="material-symbols-rounded">
+                        playing_cards
+                        </i>
+                        <p>45 Flashcards</p>
+                    </div>
+                </article>
+
+                <article class="deck">
+                    <header class="deck__header">
+                        <h5>Advanced Business English Vocab B2</h5>
+                        <button class="icon">
+                            <i class="material-symbols-rounded">
+                            more_vert
+                            </i>
+                        </button>
+                    </header>
+                    <div class="deck__props">
+                        <i class="material-symbols-rounded">
+                        playing_cards
+                        </i>
+                        <p>101 Flashcards</p>
+                    </div>
+                </article>
+
+                <article class="deck">
+                    <header class="deck__header">
+                        <h5>Data Structures & Algorithms</h5>
+                        <button class="icon">
+                            <i class="material-symbols-rounded">
+                            more_vert
+                            </i>
+                        </button>
+                    </header>
+                    <div class="deck__props">
+                        <i class="material-symbols-rounded">
+                        playing_cards
+                        </i>
+                        <p>15 Flashcards</p>
+                    </div>
+                </article>
+                
+                <article class="deck">
+                    <header class="deck__header">
+                        <h5>Marketing Global</h5>
+                        <button class="icon">
+                            <i class="material-symbols-rounded">
+                            more_vert
+                            </i>
+                        </button>
+                    </header>
+                    <div class="deck__props">
+                        <i class="material-symbols-rounded">
+                        playing_cards
+                        </i>
+                        <p>35 Flashcards</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <section class="flashcard-stack">
+            <button class="add-flashcard glass">
+                <i class="material-symbols-rounded">
+                add_circle
+                </i>
+                <p>Añadir Flashcard</p>
+            </button>
+
+            <section class="flashcard-stack__content">
+                <article class="flashcard">
+                    <div class="flashcard__wrapper">
+                        <button class="drag icon">
+                            <i class="material-symbols-rounded">
+                            drag_handle
+                            </i>
+                        </button>
+                        <h4>Flashcard X</h4>
+                    </div>
+                    <button class="delete icon">
+                        <i class="material-symbols-rounded">
+                        delete
+                        </i>
+                    </button>
+                </article>
+            </section>
+        </section>
+    </main>
+</body>

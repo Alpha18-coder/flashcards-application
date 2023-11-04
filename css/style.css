@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --bg: #D4E9F7;
+    --black: #0F0E1D;
+    --accent: #FF7A14;
+    --accent-050: #FFF3EB;
+    --accent-100: #FFA866;
+    --primary-purple-100: #EFEEFC;
+    --primary-purple-200: hsla(246, 70%, 38%,80%);
+    --primary-purple-300: #2B1DA5;
+    --fs-36: 2.25rem; /* 36px */
+    --fs-30: 1.875rem; /* 30px */
+    --fs-26: 1.625rem; /* 26px */
+    --fs-24: 1.5rem; /* 24px */
+    --fs-20: 1.25rem; /* 20px -> h5, button, placeholder */
+    --radius: 10.408px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    box-sizing: inherit;
+    font-size: 100%;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.5;
+    font-family: Roboto, sans-serif;
+    background-color: var(--bg);
+    color: var(--black);
+    font-size: 18px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(var(--fs-24), var(--fs-26), var(--fs-36));
+}
+
+h2 {
+    font-size: clamp(var(--fs-20), var(--fs-24), var(--fs-30));
+}
+
+h3 {
+    font-size: clamp(1rem, var(--fs-20), var(--fs-24));
+}
+
+h4 {
+    font-size: clamp(0.8rem, 1rem, var(--fs-20));
+}
+
+h5 {
+    font-size: var(--fs-20);
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    font-size: var(--fs-20);
+    cursor: pointer;
+}
+
+
+section, article, button, a {
+    border-radius: var(--radius);
+}
+
+/* Makes sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+button, a {
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+a:hover {
+    font-weight: bold;
+}
+
+.icon {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    font-size: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    border-radius: 50px;
+}
+
+.glass {
+    border: 1.5px solid rgba(255, 255, 255, 0.88);
+    background: rgba(250, 250, 255, 0.60);
+
+    /* Glass Effect */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.glass-container {
+    border: 1.5px solid rgba(255, 255, 255, 0.88);
+    background: rgba(245, 245, 255, 0.52);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.btn {
+    display: flex;
+    border: 0;
+    width: 100%;
+    height: 50px;
+    padding: 4px 62px;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--accent);
+    
+    /* Orange Glow */
+    box-shadow: 0px 10px 15px 0px hsla(17, 100%, 59%, 0.602);
+
+    /* Font */
+    color: #FFF;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ghost-btn {
+    display: flex;
+    border: 0;
+    height: 50px;
+    padding: 10px 32px;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    gap: 5px;
+
+    border: 1.041px solid var(--accent-orange, #FF7A14);
+    transition: all 0.3s ease-in-out;
+
+    /* Font */
+    color: var(--accent);
+    font-size: 1rem;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+
+.ghost-btn:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.phase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 5px 15px;
+
+    color: #fff;
+}
+
+.learning {
+    background: #1ECD0E;
+}
+
+.reviewing {
+    background: #2891D7;
+}
+
+.relearning {
+    background-color: var(--accent);
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before, 
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration:0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    width: 100vw;
+    padding: 15px 30px;
+}
+
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlinks, .options, .mobile-menu {
+    display: none;
+}
+
+.hamburger {
+    margin-top: 6px;
+    scale: 1.5;
+} 
+
+.profile {
+    display: flex;
+    height: 45px;
+    padding: 0px 20px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.profile-pic {
+    display: grid;
+    place-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--fs-20);
+    font-weight: 700;
+    border-radius: 50px;
+    background: #9747FF;
+    color: #FFF;
+    width: 35px;
+    height: 35px;
+    padding-left: 0.5px;
+}
+
+.profile > p {
+    line-height: 1;
+    height: 19px;
+    display: flex;
+    align-items: end;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+    .add {
+        color: white;
+        font-size: 35px;
+        background: var(--accent);
+        box-shadow: 0px 3px 12px 0px rgba(255, 108, 48, 0.50);
+        transition: all 0.1s ease-in-out;
+    }
+
+    .add:hover {
+        font-weight: normal;
+        scale: 1.1;
+    }
+
+@media (min-width: 58.75Em) { /* 940px */
+    .hamburger, .mobile-menu {
+        display: none;
+    }
+    
+    .navlinks {
+        display: inherit;
+        align-items: bottom;
+        gap: 35px;
+
+        font-weight: 600;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+        
+    .arrow-down {
+        width: 18px;
+        cursor: pointer;
+    }
+}
+
+
+/* CONTENT */
+
+main {
+    padding: 30px;
+}
+
+.layer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.blob {
+    z-index: -1;
+    position: absolute;
+    flex-shrink: 0;
+    filter: blur(70px);
+    -webkit-filter: blur(70px);
+    transition: all 0.3s ease-out;
+}
+
+.blob:nth-child(1){
+    left: 23px;
+    top: 666px;
+    width: 270px;
+    height: 270px;
+    border-radius: 626px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(43, 29, 165, 0.25) 0%, rgba(43, 29, 165, 0.13) 100%);
+}
+
+.blob:nth-child(2){
+    left: 180px;
+    top: 370px;
+    width: 270px;
+    height: 270px;
+
+    border-radius: 626px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 122, 20, 0.18) 0%, rgba(255, 122, 20, 0.09) 100%);
+}
+
+.blob:nth-child(3){
+    left: -106.36px;
+    top: 252px;
+    width: 272.661px;
+    height: 278.725px;
+    border-radius: 578.725px;
+    transform: rotate(2.016deg);
+
+    border-radius: 578.725px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(61, 227, 207, 0.25) 0%, rgba(61, 227, 207, 0.13) 100%);
+}
+
+.blob:nth-child(4) {
+    width: 254.101px;
+    height: 254.584px;
+    right: 256.95px;
+    top: -134.2px;
+
+    transform: rotate(2.016deg);
+    border-radius: 467.101px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(227, 61, 160, 0.18) 0%, rgba(227, 61, 160, 0.09) 100%);
+}
+
+
+/* ICONS */
+
+i {
+    user-select: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: pointer ;
+}
+
+.icon > i, div > i, span > i, ul > i {
+    font-size: inherit !important;
+    cursor: inherit;
+}
+
+.profile > i {
+    scale: 2.5;
+}
+
+
+/* DESKTOP/TABLET */
+@media (min-width: 43.125em) { /* 690px */
+    .blob:nth-child(1) {
+        top: 866px;
+        width: 626px;
+        height: 540px;
+    }
+
+    .blob:nth-child(2) {
+        left: 780px;
+        width: 626px;
+        height: 540px;
+    }
+
+    .blob:nth-child(3) {
+        left: 146.36px;
+        width: 572.661px;
+        height: 578.725px;
+        border-radius: 578.725px;
+    }
+
+    .blob:nth-child(4) {
+        width: 467.101px;
+        height: 404.584px;
+        right: 56.95px;
+    }
+}

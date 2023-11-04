@@ -1,12 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flashcards Application</title>
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="AsherCode">
+    <meta name="description" content="Aplicación de Flashcards 
+    para Estudiantes">
+
+    <link rel="icon" href="assets/favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="./css/style.css?v=1.0">
+    <link rel="stylesheet" href="./css/homepage.css?v=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     
+    <section class="layer">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </section>
+
+    <header class="glass-container">
+        <nav>
+            <h1><a href="/">Flashcards App</a></h1>
+            <ul class="navlinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/database.html">Base de Datos</a></li>
+                <li><a href="/tutorial.html">Tutorial</a></li>
+            </ul>
+
+            <div class="options">
+                <button>
+                    <a class="add icon" href="/flashcards.html">+</a>
+                </button>
+                <button class="icon glass">
+                    <i class="material-symbols-rounded">
+                    notifications
+                    </i>
+                </button>
+                <div class="profile glass">
+                    <div class="profile-pic">A</div>
+                    <p>AsherCode</p>
+                    <i class="material-symbols-rounded">
+                    arrow_drop_down
+                    </i>
+                </div>
+            </div>
+
+            <button class="hamburger">
+                <i class="hamburger material-symbols-rounded">
+                menu
+                </i>
+            </button>
+            
+            <div class="mobile-menu">
+                <ul class="navlinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/database.html">Base de Datos</a></li>
+                    <li><a href="/tutorial.html">Tutorial</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <p class="welcoming">Bienvenido de Vuelta, <b>AsherKnight</b></p>
+
+        <section class="next-session">
+            <h2>Próxima Sesión</h2>
+
+            <div class="next-session__decks">
+                <article class="deck">
+                    <header class="deck__header">
+                        <div class="profile-pic">A</div>
+                        <i class="material-symbols-rounded">
+                        more_vert
+                        </i>
+                    </header>
+
+                    <h3 class="deck__title">Computer Science</h3>
+
+                    <div class="deck__props">
+                        <span>
+                            <i class="material-symbols-rounded">
+                            playing_cards
+                            </i>
+                            <p>45 Flashcards</p>
+                        </span>
+                        <span>
+                            <i class="material-symbols-rounded">
+                                nest_clock_farsight_analog
+                            </i>
+                            <p>Próxima sesión en 5 minutos</p>
+                        </span>
+                    </div>
+
+                    <button>
+                        <a class="btn" href="/session-page.html">Empezar sesión</a>
+                    </button>
+                </article>
+
+                <article class="deck">
+                    <header class="deck__header">
+                        <div class="profile-pic">A</div>
+                        <i class="material-symbols-rounded">
+                        more_vert
+                        </i>
+                    </header>
+
+                    <h3 class="deck__title">Advanced Business English Vocab B2</h3>
+
+                    <div class="deck__props">
+                        <span>
+                            <i class="material-symbols-rounded">
+                            playing_cards
+                            </i>
+                            <p>101 Flashcards</p>
+                        </span>
+                        <span>
+                            <i class="material-symbols-rounded">
+                                nest_clock_farsight_analog
+                            </i>
+                            <p>Próxima sesión en 1 hora</p>
+                        </span>
+                    </div>
+
+                    <button>
+                        <a class="btn" href="/session-page.html">Empezar sesión</a>
+                    </button>
+                </article>
+
+                <article class="deck">
+                    <header class="deck__header">
+                        <div class="profile-pic">A</div>
+                        <i class="material-symbols-rounded">
+                        more_vert
+                        </i>
+                    </header>
+
+                    <h3 class="deck__title">Data Structures & Algorithms</h3>
+
+                    <div class="deck__props">
+                        <span>
+                            <i class="material-symbols-rounded">
+                            playing_cards
+                            </i>
+                            <p>15 Flashcards</p>
+                        </span>
+                        <span>
+                            <i class="material-symbols-rounded">
+                                nest_clock_farsight_analog
+                            </i>
+                            <p>Próxima sesión en 3 días</p>
+                        </span>
+                    </div>
+
+                    <button>
+                        <a class="btn" href="/session-page.html">Empezar sesión</a>
+                    </button>
+                </article>
+
+                <article class="deck">
+                    <header class="deck__header">
+                        <div class="profile-pic">A</div>
+                        <i class="material-symbols-rounded">
+                        more_vert
+                        </i>
+                    </header>
+
+                    <h3 class="deck__title">Marketing Global</h3>
+
+                    <div class="deck__props">
+                        <span>
+                            <i class="material-symbols-rounded">
+                            playing_cards
+                            </i>
+                            <p>35 Flashcards</p>
+                        </span>
+                        <span>
+                            <i class="material-symbols-rounded">
+                                nest_clock_farsight_analog
+                            </i>
+                            <p>Próxima sesión en 1 mes</p>
+                        </span>
+                    </div>
+
+                    <button>
+                        <a class="btn" href="/session-page.html">Empezar sesión</a>
+                    </button>
+                </article>
+            </div>    
+        </section>
+
+        <section class="deck-list">
+            <h2>Tus Mazos</h2>
+            <article class="deck">
+                <div class="deck__wrapper">
+                    <div class="deck-card__profile">
+                        A
+                    </div>
+                    <div class="deck-card__content">
+                        <h3 class="deck-title">Mi Mazo</h3>
+                        <div class="deck-props">
+                            <span>
+                                <i class="material-symbols-rounded">
+                                playing_cards
+                                </i>
+                                <p>45 Flashcards</p>
+                            </span>
+                            <span>
+                                <i class="material-symbols-rounded">
+                                    nest_clock_farsight_analog
+                                </i>
+                                <p>Próxima sesión en 5 minutos</p>
+                            </span>
+                        </div>
+                        <div class="deck-phases">
+                            <span class="phase learning">
+                                <p>10 Aprendiendo</p>
+                            </span>
+                            <span class="phase reviewing">
+                                <p>20 Repasando</p>
+                            </span>
+                            <span class="phase relearning">
+                                <p>20 reaprendiendo</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button>
+                    <a class="practice-btn icon" href="./practice.html">
+                        <i class="material-symbols-rounded">
+                        play_arrow
+                        </i>
+                    </a>
+                </button>
+            </article>
+        </section>
+    </main>
 </body>
+<script src="index.js" type="module"></script>
 </html>

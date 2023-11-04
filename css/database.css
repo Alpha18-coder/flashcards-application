@@ -1,0 +1,154 @@
+main {
+    min-height: 88vh;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 60px;
+    font-size: 1rem;
+}
+
+.features-container, .practice-container {
+    width: 100%;
+}
+
+.features-container {
+    flex-basis: 60%;
+    flex-grow: 3;
+    display: grid;
+    grid-template-columns: minmax(250px, 80%) 1fr;
+    gap: 30px;
+    padding: 16px 17.694px;
+}
+
+.practice-container {
+    border-radius: var(--radius);
+    flex-basis: 25%;
+    flex-grow: 1;
+    display: grid;
+    padding: 10px 5px;
+    place-items: center;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: inherit;
+    height: 49px;
+    padding: 10px;
+    color: hsla(0, 0%, 50%, 1);
+    font-size: 25px;
+}
+
+.search-bar > input {
+    width: 90%;
+    outline: none;
+    border: none;
+    cursor: text
+}
+
+
+.practice-container > a {
+    width: 70%;
+}
+
+/* FLASHCARDS LIST */
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.list__header, .flashcard {
+    display: grid;
+    grid-template-columns:  
+        minmax(auto, 80px)
+        repeat(5, minmax(150px, 190px));
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 15px;
+    width: 90vw;
+    overflow-x: auto;
+}
+
+.list__header {
+    font-size: 32px;
+}
+
+.flashcard{
+    background-color: #fff;
+    align-items: center;
+    height: fit-content;
+    font-size: 0.87rem;
+}
+
+.drag, .add-flashcard {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: var(--secondary-black);
+}
+
+.drag {
+    font-size: 52px;
+    cursor: grab;
+}
+
+.drag:active {
+    cursor: grabbing;
+}
+
+.phase {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(116, 80%, 94%);
+    color: hsl(115, 68%, 60%);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    gap: 5px;
+}
+
+.tags > p {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+    border: 1px solid var(--secondary-black, #0F0E1D);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.actions > .icon {
+    color: var(--accent);
+}
+
+@media (min-width: 49.125Em) {/* 690px */
+    .features {
+        width: 95vw;
+    }
+
+    .list__header,
+    .flashcard {
+        width: 95vw;
+    }
+}
