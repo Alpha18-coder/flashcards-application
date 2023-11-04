@@ -21,6 +21,14 @@ main {
     flex-grow: 3;
 }
 
+.deck-stack__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    margin-left: 10px;
+    padding: 0;
+}
 
 .deck-stack__content {
     display: flex;
@@ -28,22 +36,13 @@ main {
     gap: 12px;
     max-height: 83%;
     padding-left: 10px;
+    padding-right: 10px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
-.deck-stack__header {
-    width: 98%;
-    margin-left: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .deck {
     display: flex;
-    width: 98%;
     flex-direction: column;
     gap: 10px;
     background-color: #fff;
@@ -93,7 +92,7 @@ main {
 }
 
 
-.add-flashcard { 
+.add-flashcard, .add-deck { 
     width: 100%;
     display: flex;
     justify-content: center;
